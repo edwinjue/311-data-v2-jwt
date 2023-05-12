@@ -2,7 +2,7 @@ import { type NextRequest, NextResponse } from 'next/server'
 import { verifyAuth } from '@lib/auth'
 
 export const config = {
-  matcher: [ '/api/protected', '/protected' ],
+  matcher: [ '/api/protected', '/protected', '/api/requests' ],
 }
 
 export async function middleware(req: NextRequest) {
