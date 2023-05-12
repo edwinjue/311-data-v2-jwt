@@ -33,7 +33,8 @@ export async function verifyAuth(req: NextRequest) {
  * Adds the user token cookie to a response.
  */
 export async function setUserCookie(res: NextResponse) {
-  const token = await new SignJWT({})
+  try{
+    const token = await new SignJWT({})
     .setProtectedHeader({ alg: 'HS256' })
     .setJti(nanoid())
     .setIssuedAt()
@@ -46,6 +47,12 @@ export async function setUserCookie(res: NextResponse) {
   })
 
   return res
+  }
+  catch(e){
+    console.error('setUserCookie: Error occurred:', e)
+    return undefined
+  }
+
 }
 
 /**

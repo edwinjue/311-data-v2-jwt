@@ -34,7 +34,10 @@ export default function Index() {
       <div className="space-x-4 mt-2 mb-4">
         <Button
           onClick={() => {
-            fetch('/api/auth', { method: 'POST' })
+            const res = fetch('/api/auth', { method: 'POST' })
+            if (!!res === true){
+              alert(`User authenticated. You want a cookie? You got a user-token cookie!`)
+            }
           }}
         >
           Set the {USER_TOKEN} cookie
