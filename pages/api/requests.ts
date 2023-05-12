@@ -10,6 +10,10 @@ export const config = {
 
 export default async function requests(req: NextRequest) {
   try{
+    if (req.method === 'POST') {
+      return jsonResponse(405, { error: { message: 'Method not allowed' } })
+    }
+
     const query = querystring.parse(req.url.split('?')[1])
     const startDate = query.startDate
     const endDate = query.endDate
