@@ -33,11 +33,10 @@ export default function Index() {
       </Text>
       <div className="space-x-4 mt-2 mb-4">
         <Button
-          onClick={() => {
-            const res = fetch('/api/auth', { method: 'POST' })
-            if (!!res === true){
-              alert(`User authenticated. You want a cookie? You got a user-token cookie!`)
-            }
+          onClick={ async () => {
+            const res = await fetch('/api/auth', { method: 'POST' })
+            const data = await res.json()
+            data?.success && alert(`User authenticated. You want a cookie? You got a user-token cookie!`)
           }}
         >
           Set the {USER_TOKEN} cookie
