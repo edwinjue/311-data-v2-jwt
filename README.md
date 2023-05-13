@@ -1,20 +1,15 @@
----
-name: JWT Authentication
-slug: jwt-authentication
-description: Learn how to do JWT authentication at the edge.
-framework: Next.js
-useCase:
+# Learn how to do JWT authentication at the edge
+* Framework: Next.js
+* useCase:
   - Edge Functions
   - Edge Middleware
   - Documentation
-css: Tailwind
-deployUrl: https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Fvercel%2Fexamples%2Ftree%2Fmain%2Fedge-middleware%2Fjwt-authentication&env=JWT_SECRET_KEY&envDescription=Random%20secret%20that'll%20be%20used%20to%20sign%20JWTs&project-name=jwt-authentication&repo-name=jwt-authentication
-demoUrl: https://edge-functions-jwt-authentication.vercel.app
-relatedTemplates:
+* css: Tailwind
+* Demo: https://311-data-v2-jwt.vercel.app/
+* relatedTemplates:
   - nextjs-boilerplate
   - blog-starter-kit
   - platforms-starter-kit
----
 
 # JWT Authentication
 
@@ -22,7 +17,7 @@ The example shows how to do JWT authentication at the edge using Edge Middleware
 
 ## Demo
 
-https://edge-functions-jwt-authentication.vercel.app
+https://311-data-v2-jwt.vercel.app/
 
 Visit the demo to learn more about how it works!
 
