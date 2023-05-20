@@ -15,11 +15,17 @@
 
 The example shows how to do JWT authentication at the edge using Edge Middleware and Edge Functions.
 
-## Demo
-
-https://311-data-v2-jwt.vercel.app/
-
-Visit the demo to learn more about how it works!
+## Quick Demo
+1. Initially, you should not be authorized to view request data.  
+Visit: https://311-data-v2-jwt.vercel.app/api/requests?startDate=2023-04-01&endDate=2023-04-20
+2. Get authorized.  
+Click the button on this page: https://311-data-v2-jwt.vercel.app/
+3. Now you should be authorized to view the request data.  
+Visit and reload: https://311-data-v2-jwt.vercel.app/api/requests?startDate=2023-04-01&endDate=2023-04-20
+4. To revoke authorization, remove the `user-token` cookie from the client browser.  
+(Dev Tools > Application > Storage > Cookies)
+5. Now, you should no longer be authorized to view the request data.  
+Visit and reload: https://311-data-v2-jwt.vercel.app/api/requests?startDate=2023-04-01&endDate=2023-04-20
 
 ## How to Use
 
